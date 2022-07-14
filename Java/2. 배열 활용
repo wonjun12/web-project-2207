@@ -1,0 +1,49 @@
+1. 배열의 복사
+    배열은 한 번 생성하면 길이를 변경할 수 없다.
+    - 많은 데이터를 저장하기 위해서 큰 배열을 만들고, 이전 배열의 데이터를 새로 만든 배열을 복사한다.
+
+    1) System 클래스의 arraycopy() 메소드
+    2) Arrays 클래스의 copyOf() 메소드
+    3) Object 클래스의 clone() 메소드
+    4) for 문과 인덱스를 이용한 복사
+
+    가장 좋은 성능은 배열의 복사만을 위해 만들어진 arraycopy() 메소드이다.
+    현재는 좀 더 유연한 방식의 copyOf() 메소드가 좋다.
+
+    arraycopy(), copyOf() 와 for 문을 이용한 복사는 배열의 길이를 마음대로 늘릴 수 있다.
+     - clone() 메소드는 이전 배열과 같은 길이의 배열밖에 만들수 없다.
+
+
+    1) System 클래스의 arraycopy() 메소드
+     System.arraycopy(src, srcPos, dest, destPos, length);
+        1. src = 복사 할 원본
+        2. srcPos = 복사할 원본의 시작점(정수) 처음 부터 시작 시 '0'입력
+        3. dest = 복사 될 사본
+        4. destPos = 복사 된 원본을 사용할 시작점(정수) 처음 부터 사용시 '0'입력
+
+    2) Arrays 클래스의 copyOf() 메소드
+     Arrays.copyOf(original, newLength)
+        1. original = 복사 할 원본
+        2. newLength = 복사 할 원본의 복사 크기(복사의 시작은 첫 값 부터)
+
+    3) Object 클래스의 clone() 메소드
+     배열변수.clone();
+        1. 크기는 변하는게 없지만 값을 그대로 복사한다.
+
+    
+2. Enhanced for 문 (JDK 1.5부터 사용되는 반복문)
+    for(타입  변수이름 : 배열이나컬렉션이름)
+    {
+        배열의 길이 만큼 반복적으로 실행하고자 하는 명령문;
+    }
+
+    eX)
+        int[] arr1 = {1,2,3,4};
+
+        for(int e : arr1){
+            e += 10;
+            System.out.println(e);
+            System.out.println(arr1[0]);
+        }
+        // for문을 활용하여 arr1의 배열 값들을 단계식 변수 e에 넣는다.
+        // 기존의 arr1의 값은 변하지 않지만 for문이 돌아가는 상태에서 현재의 위치에 따른 값을 복사 할수있다.
