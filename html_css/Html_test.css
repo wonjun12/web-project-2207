@@ -1,0 +1,45 @@
+*{
+    border: 2px solid black;
+}
+html{
+    background-color: blue;
+}
+body{
+    margin:0;
+    padding: 20px;
+    background-color:green;
+}
+div{
+    padding: 30px;
+    border: 2px solid black;
+}
+#first{
+    background-color: thistle;
+    width: 400px;
+    height: 400px;
+}
+#second{
+    background-color: teal;
+    width: 300px;
+    height: 300px;
+}
+#third{
+    background-color: wheat;
+    width: 200px;
+    height: 200px;
+}
+#fourth{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+#span,
+#span2{
+    background-color: yellow;
+}
+.btn{
+    padding:3px;
+}
+.span{
+    background-color: yellowgreen;
+}

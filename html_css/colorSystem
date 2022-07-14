@@ -1,0 +1,12 @@
+컬러 코드를 활용하여 색을 지정한다.
+#ffffff
+rgba(255,255,255,100) 마지막은 투명도 
+
+:root{
+    --main-color: #ffffff;
+    --default-border: 1px solid var(--main-color);
+} /* 변수는 빈공간이 없어야 하며, --이름-이름 << 으로 한다. */
+a{--main-color}
+p{--main-color}
+
+root는 모든 document의 뿌리가 된다. 즉, 출발점

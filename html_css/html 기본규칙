@@ -1,0 +1,37 @@
+<!DOCTYPE html> text를 html로 알려준다. (필수)
+<html lang=""> lang은 검색엔진에 도움을 주기 위한것 
+                   사이트에서 어떤 언어를 사용하지는 알려주는것
+
+<head>
+    head 태그안에 모든것들은 보여지지 않는다.
+    <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://nomadcoders.co/m.png " /> 타이틀에 그림을 넣게 해준다.
+    <title>
+        제목
+    </title>
+    <meta charset="utf-8" /> 한글이나 특수문자가 있을경우 글자가 깨지지 않게 해준다.
+    <meta name="" content="" /> 부가적인 정보를 말한다.
+
+
+    <link href="이름.css" rel="stylesheet" /> css를 html에 연결 하는 방법
+    <style> </style> html안에 css를 사용하게 해주는 방법
+</head>
+
+
+<body>
+    눈에 보이는 것들을 body안에 넣는다.
+    <form>
+        <lable for=""></lable>
+        <input id="" />
+    </form>
+
+
+    <div id="header"></div> div를 사용해도 되지만 좀더 쉽게 알아 볼수 있게 할수있다.
+
+    <header></header>
+    <main></main>
+    <footer></footer>
+
+
+</body>
+
+</html>

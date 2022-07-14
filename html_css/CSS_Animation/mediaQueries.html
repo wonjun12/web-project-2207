@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 스크린의 사이즈마다 CSS로 크기를 변경하는 방법 -->
+<html>
+    <head>
+        <title></title>
+        <style>
+            body{
+                display: flex;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+            div{
+                background-color: green;
+                width: 300px;
+                height: 300px;
+            }
+            
+            /**화면의 크기가 해당 크기의 범위에 있으면 바뀐다. (즉, 스크린에 따라 변하는 함수) */
+            /* min-width, max-width 등 최소, 최대의 값을 설정 할수있다.*/
+            @media screen and (max-width: 800px) {
+                div{
+                    background-color: tomato;
+                }
+            }
+            @media screen and (min-width: 801px) and (max-width: 1000px) {
+                div{
+                    background-color: blue;
+                }
+            }
+            @media print {
+                body{
+                    background-color: wheat;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div></div>
+    </body>
+</html>

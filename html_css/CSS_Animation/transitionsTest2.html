@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--Transition : 어떤 상태의 다른 상태로의 변화를 애니메이션으로 만드는 방법 -->
+<!-- ㄴ 속성은 state가 없는 요소만 가능 -->
+<html lan="kr">
+    <head>
+        <title>advencdCSS TEST</title>
+        <style>
+            body{
+                display: flex;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+                
+
+
+            /*항시 애니메이션*/
+            @keyframes superMan   {
+                /*
+                from{
+                    transform: rotateX(0);
+                }
+                to{
+                    transform: rotateX(360deg);
+                }
+                */
+
+                0% {
+                    transform: rotateY(0);
+                }
+                25%{
+                    transform: scale(2);
+                }
+                50%{
+                    border-radius: 0px;
+                    transform: rotateY(180deg) translateY(100px);
+                    border-color: red;
+                }
+                75%{
+                    transform: scale(5);
+                }
+                100%{
+                    transform: rotateY(0) translateY(0px);
+                }
+                /*
+                from - to 명령어는 시작후 끝난다음에는 처음으로 점프 하는 식으로 바로 되돌아 간다.
+                0 ~ 100%의 명령어는 시작 후 끝난 다음에도 단계별로 시작과 끝을 되돌아 가는 방식을 사용된다.
+                */
+            } 
+            img{
+                border: 5px solid black;
+                border-radius: 50%; /*바깥선을 원으로 만들어줌*/
+                /*transform: rotateY(33deg); */
+                /*세로 폭이 줄어듬 (세로로 회전한다. 값이 90이면 선밖에 안보임)*/
+                /*translate 는 기존의 위치에서 특정 수치 만큼 이동시켜주지만 다른 현제들을 변화시키지는 않는다.*/
+
+                /*transition: transform 3s ease-in-out;*/
+
+                animation: superMan 5s ease-in-out infinite;
+                height: 150px;;
+            }
+            /*
+            img:hover{
+                transform: rotateX(90deg);
+            }
+            */
+
+
+        </style>
+    </head>
+    <body>
+        <img src="isfj.jpg" />
+    </body>
+</html>

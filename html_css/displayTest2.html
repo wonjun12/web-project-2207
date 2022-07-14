@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            body{
+                height: 1000vh;
+                margin: 50px;
+
+            }
+            div{
+                
+                width: 150px;
+                height: 150px;
+                background-color: green;
+                position: static;
+                
+            }
+            div:first-child{
+                background-color: blue;
+            }
+            div:last-child{
+                background-color: red;
+            }
+            div:nth-child(3){
+                background-color: white;
+            }
+            .green{
+                background-color: yellow;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                top: -10px;
+            }
+
+            
+            p span{
+                color: blue;
+            } /* 부모 p 자식 span을 동시에 적용 시킴*/
+            body > span{
+                color: white;
+                margin: 25px;
+            }/* 부모 body바로 밑 자식 span을 가리키는 방법*/
+            p + address{
+                background-color: green;
+            }/* p다음 바로 오는 span을 가리키는 방법 
+                => 바로 다음으로 안오면 사용 불가능 (형제 관계)*/
+            p ~ span{
+                text-decoration: underline;
+            }/* p와 span이 형제인데 서로 이어 지지 않을때 사용하는 방법 */
+            
+
+            intput{
+                border: 2px solid;
+            }
+            input:optional{
+                border-color: blue;
+            }
+            input:required{
+                border-color: yellowgreen;
+            }
+            input[type="password"]{
+                background-color: pink;
+            }
+            /*
+            input[placeholder~="name"]{
+                background-color: blueviolet;
+            }*/
+            
+            button:hover input{
+                background-color: blue;
+            }/*버튼위에 마우스가 있을 시 실행 되는 것*/
+            button:active{
+                background-color: pink;
+            }/*버튼을 클릭 하고 있을 때 실행되는 것.*/
+                /*=> active보다 hover가 뒤에있는 경우 실행이 안될수 있음*/
+            input:focus{
+                background-color: black;
+            }/*현재 키보드 입력란에 해당된다.*/
+            a:visited{
+                color: red;
+            }/*방문 했었던 정보를 토대로 확인 및 변화 해주는것*/
+                /*hover, focus도 가능하다*/
+            /*
+            form:focus-within{
+                border-color: green;
+            } /* 부모 form안의 자식들중 하나라도 focus가 된다면 부모의 모습이 변경된다. */
+            /**/
+
+            /*
+            form:hover input{
+                background-color: green;
+            } /*form이 hover상태가 되면 input이 바뀌는 방법*/
+                /* 부모 자식의 관계에서 만 가능하다.
+                    ex)button:hover input은 안되더라 */
+            /**/
+        </style>
+    </head>
+    <body>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+        </div>
+        
+        <p> HIEKSDJA:WJDOA:JDFslkfjalifgjsdklgsgi<span> Ang </span>lsejlisfjsdilf</p>
+        <address> HIHIHIHIHHI</address>
+        <span> Hello</span>
+
+        <form>
+            <input type="text" placeholder="first name" />
+            <input type="text" placeholder="scend name" />
+            <input type="password" required placeholder="password" />
+            <!-- required 필수 입력란으로 만들어 줌-->
+            <button>Click</button>
+        </form>
+        
+
+        <a href="https://naver.com"> 네이버로 가자 </a>
+    </body>
+</html>

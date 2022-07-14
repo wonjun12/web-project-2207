@@ -1,0 +1,25 @@
+<ul>
+    beer
+    김치
+    meat
+    milk
+</ul>
+
+<ul>
+    <li>beer  </li>
+    <li>김치  </li>
+    <li>meat  </li>
+    <li> milk </li>
+</ul>
+
+<ol>
+    <li>beer  </li>
+    <li>김치  </li>
+    <li>meat  </li>
+    <li> milk </li>
+</ol>
+
+
+ul = unordered list
+oi = odered list
+li = list item

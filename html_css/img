@@ -1,0 +1,4 @@
+img태그는 self-closing tag
+<img />
+
+<img src="https://s.pstatic.net/static/newsstand/2022/0706/article_img/new_main/9079/092451_001.jpg" />

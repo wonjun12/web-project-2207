@@ -1,0 +1,25 @@
+1. 자식 엘리먼트에는 어떤것도 적지 말아야 한다.
+    부모 엘리먼트에만 말한다.
+2. 주축과 교차축
+justify-content (주축 - 수평)
+align-items (교차축-수직)
+
+display: flex;
+해당 문장이 있어야 사용가능.
+
+height: 100vh;
+vh = 100 screen height
+화면 크기에 따라 크기가 바뀐다.
+px
+그 자체로 크기를 정한다.
+
+flex-direction: row;
+(defalt)
+flex-direction: column;
+(세로로 만들어준다)
+  = 해당 명령어 입력시 justify-content와 align-items가 서로 바뀌어서 적용된다.
+    즉, justify-content는 수평에서 수직으로, align-items는 수직에서 수평으로.
+
+flex-wrap: wrap;
+(defalt = nowrap)
+익스플로어 창이 좁혀질때의 옵션

@@ -1,0 +1,6 @@
+<a>Go to google.com</a>
+link가 없다면 그냥 text다
+
+<a href="http://www.google.com">Go to google.com</a>
+<a href="http://www.google.com" target="_blank">Go to google.com</a>
+_blank는 새창에 열리도록 한다.

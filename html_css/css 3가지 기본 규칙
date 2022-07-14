@@ -1,0 +1,23 @@
+css는 html태그를 가리키는 역할
+
+selector (가르키는 대상) {
+    여러 옵션들
+
+}
+
+h1 {
+            color:blue;
+            font-size:20px;
+            
+        }
+
+inline 은 높이와 넓이가 있고
+block 은 높이와 넓이가 있다.
+
+margin은 box의 border(경계)의 바깥에 있는 공간
+
+
+body{
+    background-color:thistle;
+    margin:15px 20px 5px 8px;  위 오른쪽 아래 왼쪽
+}

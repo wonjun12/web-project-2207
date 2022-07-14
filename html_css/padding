@@ -1,0 +1,35 @@
+margin의 반대가 padding
+
+3가지 전부 inline에 적용할수있다.
+padding = box의 경계로부터의 안쪽의 공간을 만듬
+margin = box의 경계로부터의 바깥의 공간을 만듬 (단, margin은 '상하'는 적용안된다.)
+border = box의 경계
+
+css 에서 태그를 부를때는 해당 태그 이름을 적으면 되지만,
+id를 호출할때는 앞에 #을 붙여준다.
+ ex) #first{}
+
+
+전체 호출
+*{
+    border: 2px solid black;
+}
+
+div{
+    border: 2px solid black;
+}               스타일  색상
+
+#span,
+#span2{
+    background-color: yellow;
+}
+
+각 selector간에 묶어서 호출가능하다.
+
+<span class="btn span"> 이런식으로 2가지 이상으로 클래스를 지정할수있다.
+    Hello
+</span>
+.class명{
+
+}
+그룹으로 class로 묶어서 사용가능하다.

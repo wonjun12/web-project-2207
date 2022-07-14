@@ -1,0 +1,18 @@
+div{
+    margin-top: 10px;
+    height:150px;
+    width:150px;
+    background-color:whitesmoke;
+}
+
+span {
+    display: block;
+}
+
+html{
+    background-color:green;
+}
+body{
+    background-color:thistle;
+    margin:15px 20px 5px 8px;
+}
