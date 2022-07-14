@@ -101,4 +101,24 @@ public class class_study_class {
         }
     }
     /////////////////////////
+
+    //메소드 오버로딩 연습
+    int minusNum(int x, int y) {
+        int result = x + y;
+        return result;
+    }
+    int manusNum(int x) {
+        int result = x + y;
+        return result;
+    }
+    int manusNum(int x, int y, int z) {
+        int result = x + y +z;
+        return result;
+    }
+    double minusNum(double x, double y) {
+        double result = x + y;
+        return result;
+    }
+
+
 }
