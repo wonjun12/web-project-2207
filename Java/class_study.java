@@ -52,5 +52,6 @@ public class class_study {
             void1.gasRun(); //가스 만큼 반복하며, 가스 값이 없을 경우 return해서 메소드 종료
         }
         
+
     }
 }

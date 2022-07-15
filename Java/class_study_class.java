@@ -103,12 +103,13 @@ public class class_study_class {
     /////////////////////////
 
     //메소드 오버로딩 연습
+    //이름이 같아도 매개변수가 다르다면 사용 가능하다.
     int minusNum(int x, int y) {
         int result = x + y;
         return result;
     }
     int manusNum(int x) {
-        int result = x + y;
+        int result = x;
         return result;
     }
     int manusNum(int x, int y, int z) {
