@@ -8,7 +8,7 @@ public class class_study_class {
     
     // 기본 생성자는 자동으로 추가 된다. (생성자가 아무것도 없다면 기본으로 사용되는 생성자)
         //기본 생성자 외에 다른 생성자가 있다면 호출시 해당 생성자에 맞게 호출해야한다.
-    public class_study_class() {
+    protected class_study_class() {
         
     }    
     //

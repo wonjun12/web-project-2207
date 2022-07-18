@@ -1,0 +1,13 @@
+try {
+    예외의 발생이 예상되는 로직
+}catch(Extends e) {
+    e.getMessage();
+    예외가 발생했을 때 실행되는 로직
+}
+int a; << 원래는 오류로 실행이 안되지만 예외처리로 인해 실행을 가능하게끔 해준다.
+
+e.getMessage()
+e.toString()
+e.printStackTrace();
+
+    - try, catch로 실핼 할경우 바깥의 함수도 실행하게끔 오류를 함수안에 넣어서 실행해준다.
