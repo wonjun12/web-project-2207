@@ -1,0 +1,26 @@
+[String과 StringBuffer의 차이점]
+    - String은 우리가 출력할수 잇는 문자열을 뜻 한다.
+    - StringBuffer는 우리가 수정 할수 있게끔 해주는 값을 말한다.
+        => 당연히 2개의 값은 다르지만 StringBuffer를 String값으로 바꿔주면 사용 가능하다.
+    => String의 값을 수정하고 싶다면 String 자체에서는 변경 할 수 없지만, 
+        StringBuffer에게 값을 넘기고 변경 후 to.String()으로 바꾸어서 값을 넘겨줘야 한다.
+
+StrungBuffer strb = new StringBuffer("값");
+
+
+class Solution {
+    public String solution(String phone_number) {
+        String answer = "";
+        //StringBuffer 선언 방법
+        StringBuffer str = new StringBuffer(phone_number);
+            
+        for(int i=0; i<phone_number.length()-4; i++){
+            str.setCharAt(i,'*');
+            //1번째 부터 마지막의 4번째 까지 char을 변경 해준다.
+        }
+
+        return answer = str.toString();
+            //String으로 값을 넘겨줄려면 StringBuffer는 String이 아니기 때문에 toString()으로 치환후 넘겨준다.
+        
+    }
+}

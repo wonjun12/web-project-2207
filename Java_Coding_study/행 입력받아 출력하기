@@ -1,0 +1,31 @@
+/////////////////////내가 한 답
+class Solution {
+    public int[][] solution(int[][] arr1, int[][] arr2) {
+        int[][] answer = new int[arr1.length][arr1[0].length];
+
+        for(int i = 0; i < arr1.length; i++){
+            for(int j = 0; j < arr1[i].length; j++){
+                answer[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+
+        return answer;
+    }
+}
+
+////////////////////// 다른 사람이 한 방법
+class Solution {
+    public int[][] solution(int[][] arr1, int[][] arr2) {
+        int[][] answer = {};
+        answer = arr1; //배열을 해당 방법으로 넘기기 가능하다.
+                        // 1차열, 2차열 같은 배열 이라면 가능
+        for(int i=0; i<arr1.length; i++){
+            for(int j=0; j<arr1[0].length; j++){
+                answer[i][j] += arr2[i][j]; //값을 아예 넘기는 것이기 때문에 arr2를 그냥 아예 더하게 만든다.
+            }
+        }
+        return answer;
+    }
+}
+
+///////////////////////////////////// 
