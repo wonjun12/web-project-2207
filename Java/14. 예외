@@ -11,3 +11,51 @@ e.toString()
 e.printStackTrace();
 
     - try, catch로 실핼 할경우 바깥의 함수도 실행하게끔 오류를 함수안에 넣어서 실행해준다.
+    - 특정 함수는 예외를 강제로 사용하게끔 하는것도 있다.
+
+[다중 캐치]
+    try {
+
+    }catch(ArithmeticException e) {
+       //try에서 발생하는 예외가 ArithmeticException이라면 해당 catch를 사용한다.
+    }catch(ArrayIndexOutOfBoundsException e){
+        //try에서 발생하는 예외가 ArrayIndexOutOfBoundsException이라면 해당 catch를 사용한다.
+    }catch(Exception e){
+        //상위 2개의 예외가 발생하지 않았다면, 가장 밑에있는 Exception 예외가 발생해서 출력해준다.
+        //단, Exception은 모든 예외를 포함한 예외이기때문에 세부적인 예외다음에 하는것이 맞다. 
+            //맨 위로 넣는다면 오류가 뜬다.
+    }
+
+
+[finally]
+    try {
+        예외의 발생이 예상되는 로직
+    }catch(Extends e) {
+        예외가 발생했을 때 실행되는 로직
+    }finally{
+        예외여부와 관계없이 실행되는 로직
+        예외가 발생하든 발생하지 않든 finally는 실행한다.
+    }
+
+    [사용]
+        - 자바에서 DB와 연결할때 DB와 관련해서 작업할때 try로 작업하고, 한계가 100일때 100이상의 접속자가 들어올려할때,
+            100이상에게는 오류가 뜨게끔 하지만 finally를 사용하여 오류가 뜨든 안뜨든 연결을 끊도록 하는것이다.
+        -) 예외를 사용할때, 예외가 사용되든 안되든 특정 조건에서 무조건 사용하게끔 하는것이 finally다.
+
+[책임의 전가 throws]
+class B throws FileNotFoundException { //FileNotFoundException 이라는 예외가 발생하는 것을 다른 곳으로 넘기는 것을 말한다.
+    void run(){
+        ~~~~
+    }
+}
+class C{ //해당 부분에도 throws를 사용시에는 해당 클래스를 불러오는 곳에서 예외를 발생하도록 한다.
+            //throws를 사용시 여기서는 예외가 딱히 필요없기때문에 class c를 불러오는 곳에서 예외를 두도록 한다.
+    void run(){
+        try {
+            B.run(); //class B에서 예외 처리를 하지 않고 B를 불러오는 곳에서 예외를 처리하도록 한다.
+        }catch (FileNotFoundException e){
+            e.printStackTrace;
+        }
+        
+    }
+}

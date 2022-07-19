@@ -1,0 +1,21 @@
+class O {}
+class O extends Object {}
+//두개는 결국 동일 하며 자바는 상속을 기본으로 사용되기 때문에 Object를 상속을 기본으로 하고있다.
+
+[clone]
+clas B implements Cloneable{ //복제 가능한 클래스로 만들었다.
+    public Object clone() throws CloneNotSupportedException{ //해당 함수를 사용할려면  CloneNotSupportedException예외를 강제하고 있어서 try나 throws를 사용해야한다.
+        //clone은 기본적으로 protected의 속성을 가지고 있기때문에 public으로 바꿔준다.
+        return super.clone();
+    }
+}
+class A {
+    B a = new B();
+//  a.clone();
+    //clone의 속성은 protected다
+    try {
+        b a2 = (b) a.clone();
+    }catch (CloneNotSupportedException e){
+        e.printStackTrace;
+    }
+}

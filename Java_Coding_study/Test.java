@@ -7,6 +7,7 @@ class Test2 {
 }
 
 public class Test {
+    static int APPLE = 10;
     public static void main(String[] args) {
         String answer = "";
         String[] str = s.split(" ");
