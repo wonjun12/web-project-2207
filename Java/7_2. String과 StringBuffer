@@ -7,6 +7,9 @@
 
 StrungBuffer strb = new StringBuffer("값");
 
+[String 비교 구문]
+    - String변수1.equals(비교 대상 String);
+    - 문자열 String은 equals를 활용하여 확실하게 비교할수 있게끔 한다.
 
 class Solution {
     public String solution(String phone_number) {
