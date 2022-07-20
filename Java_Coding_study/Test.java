@@ -39,7 +39,7 @@ public class Test {
     public static void main(String[] args) {
         Test2 t1 = new Test2();
         
-        System.out.println(t1.test1(2));
+        System.out.println(t1.test1(4));
         t1.test2();
 
            
