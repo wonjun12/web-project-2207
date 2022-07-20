@@ -1,0 +1,61 @@
+
+//좋은 코딩(비교해서 for돌리기)
+public class Solution {
+    public int[] solution(int []arr) {
+        ArrayList<Integer> tempList = new ArrayList<Integer>();
+        int preNum = 10;
+        for(int num : arr) {
+            if(preNum != num)
+                tempList.add(num);
+            preNum = num;
+        }       
+        int[] answer = new int[tempList.size()];
+        for(int i=0; i<answer.length; i++) {
+            answer[i] = tempList.get(i).intValue();
+        }
+        return answer;
+    }
+}
+
+
+//내가 했던 코딩
+public class Solution {
+    public int[] solution(int []arr) {
+        int num = 0;
+        fLoop:
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[i] != arr[j]){
+                    num += 1;
+                    i = j - 1;
+                    break;
+                }else if(arr[i] == arr[j] && j+1 == arr.length){
+                    num += 1;
+                    break fLoop;
+                }
+            }
+            if(i+1 == arr.length){
+                num += 1;
+            }
+        }
+        int[] answer = new int[num];
+        fLoop:
+        for(int i = 0, count = 0; i < arr.length; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[i] != arr[j]){
+                    answer[count] = arr[i];
+                    i = j - 1;
+                    count++;
+                    break;
+                }else if(arr[i] == arr[j] && j+1 == arr.length){
+                    answer[count] = arr[i];
+                    break fLoop;
+                }
+            }
+            if(i+1 == arr.length){
+                answer[count] = arr[i];
+            }
+        }
+        return answer;
+    }
+}

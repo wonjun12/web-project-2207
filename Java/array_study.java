@@ -33,7 +33,6 @@ public class array_study {
         //0. 1차원 배열 선언
         int[] arr1 = {1,2,3,4,5};
         int len = 10;
-
         //1. System 클래스의 arraycopy() 메소드
         int[] arr2 = new int[len];
         System.arraycopy(arr1, 0, arr2, 0, arr1.length);

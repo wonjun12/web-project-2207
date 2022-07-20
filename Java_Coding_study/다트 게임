@@ -1,0 +1,45 @@
+class Solution {
+    public int solution(String dartResult) {
+        
+        int answer = dato(dartResult.split(""));
+        return answer;
+    }
+    
+    public int dato(String[] str){
+        int[] iNum = new int[3];
+        
+        for(int i = 0, count = 0; i < str.length; i++){
+            if(str[i].matches("-?\\d+(\\.\\d+)?")){
+                if(str[i+1].matches("-?\\d+(\\.\\d+)?")){
+                    iNum[count] = Integer.parseInt(str[i]+str[i+1]);
+                }else{
+                    iNum[count] = Integer.parseInt(str[i]);
+                }
+            count++;
+            i++;
+            }
+            
+            if(str[i].equals("D")){
+                iNum[count - 1] *= iNum[count - 1];
+            }else if(str[i].equals("T")){
+                iNum[count - 1] *= iNum[count - 1] * iNum[count - 1];
+            }else if(str[i].equals("*")){
+                if(count > 1){
+                    iNum[count - 2] *= 2;
+                    iNum[count - 1] *= 2;
+                }else{
+                    iNum[count - 1] *= 2;
+                }
+            }else if(str[i].equals("#")){
+                iNum[count - 1] *= -1;
+            }
+            
+        }   
+        
+        int num = iNum[0] + iNum[1] + iNum[2];
+        return num;
+    }
+    
+    
+    
+}

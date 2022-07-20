@@ -2,10 +2,12 @@ package Java_Coding_study;
 
 import javax.security.auth.x500.X500Principal;
 
+import org.omg.Messaging.SyncScopeHelper;
+
 class Test2 {
     int a;
     
-
+    
     String test1(int x){
         a = x;
         String str = "";
@@ -29,6 +31,7 @@ class Test2 {
             System.out.println();
         }
     }
+    
 }
 
 public class Test {
@@ -36,9 +39,10 @@ public class Test {
     public static void main(String[] args) {
         Test2 t1 = new Test2();
         
-        System.out.println(t1.test1(7));
+        System.out.println(t1.test1(2));
         t1.test2();
 
+           
         
 
     }
