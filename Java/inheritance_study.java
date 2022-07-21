@@ -9,6 +9,7 @@ class Substrac {
     int plusSubstac (int a){
         return a+5;
     }
+
 }
 
 class Substrac_2 extends Substrac {
