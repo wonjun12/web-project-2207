@@ -1,8 +1,7 @@
 package Java;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
+
 
 public class CollectionsFreamwork_study {
     public static void main(String[] args) {
@@ -28,6 +27,18 @@ public class CollectionsFreamwork_study {
         B.put("two", 1);
         System.out.println(B.get("one"));
         System.out.println(B.get("two"));
+
+
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        arr.add(3);
+        arr.add(2);
+        arr.add(1);
+        System.out.println("arr 0번째 "+arr.get(0));
+        //arr.sort((o1, o2) -> B.get(o2).compareTo(B.get(o1)));
+        //Collections.sort(arr, (o1, o2) -> (B.get(o1).compareTo(B.get(o2))));
+        Collections.reverse(arr);
+        System.out.println(arr.get(0));
+       
 
         
 

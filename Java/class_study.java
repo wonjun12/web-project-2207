@@ -25,6 +25,7 @@ public class class_study {
 
         //this 사용한 생성자
         class_study_class cs4 = new class_study_class(30);
+        
         System.out.print(cs4.jNum1+" ");
         System.out.print(cs4.jNum2+" ");
         System.out.print(cs4.jNum3+" \n");
