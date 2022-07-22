@@ -1,0 +1,36 @@
+[ArrayList  사용법]
+    - 기본적으로 우리가 사용하는 배열은 크기를 미리 할당해서 사용해야하지만 ArrayList는 크기를 미리 지정할 필요가없다.
+        단. 우리가 아는 배열과는 다른 사용법을 가지고 있다.
+    ex)
+        ArrayList arr = new ArrayList(); // 크기를 할당 하지 않고 미리 만든다.
+        arr.add("one"); // 값을 추가한다.
+            //모든 값을 받을 수 있기때문에 해당값은 Object로 저장이 된다.
+            //그러므로 Object타입의 변수가 아닌 변수에 저장할려한다면 오류가 난다.
+        ArrayList<String> arr = new ArrayList<String>();
+        //Object타입을 Stirng으로 형변환 하는데 이것을 제네릭으로 변환 시키면  String 값으로 변환 시킬수있다.
+        arr.get(0); //해당 번호의 값을 가져온다.
+        arr.size(); //size()크기로 값이 얼마나 있는지 확인 할수있다.
+
+[CollectionsFreamwork?]
+    - 값을 담는 그릇이다.
+    - 3가지 성격을 가지고 있다.
+        1) Set // 중복되지 않은 값을 넣고 싶으면 Set에서
+        2) List // 여러 값을 넣는데 값을 지정하지 않고 미리 만들고 싶다면 List에서
+            // Set은 순서가 보장이 안된다. List는 순서대로 저장된다.
+        4) Map
+    - 최상위에는 "Collection" interpace가 항상 있다.
+
+
+[Set] = Set은 순서가 없다.
+    - HashSet
+        ex)
+            HashSet<Integer> A = new HashSet<Integer>();
+            A.add(1);
+
+[collection]
+    - iterator() : 반복자
+
+[Map]
+    - Map은 Key와 Value의 값을 가지고 있다.
+        -> Key의 값마다 value의 값을 가지고 올수있다.
+        (Key는 중복될수 없다. value는 중복이 된다.)

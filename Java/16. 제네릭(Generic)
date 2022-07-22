@@ -1,2 +1,15 @@
 [제네릭(Generic)]
     - 클래스 내부에서 사용할 데이터 타입을 외부에서 지정하는 기업을 의미한다.
+        - 인스턴스 할때 확정 한다.
+    ex)
+        class Person<T> {
+            public T info;
+        }
+        Person<String> p1 = new Person<String>(); // 해당 객체는 String info의 데이터 타입이 된다.
+
+        Person<StringBuilder> p2 = mew Person<StringBuilder>();
+        // <T>의 데이터 타입을 미리 정하지 않고 외부에서 인스턴스 화를 하면서 그때 정하도록 하는게 제네릭(Generic)이다
+        // p1과 p2는 서로 다른 데이터 타입을 가지게 되고, 각자 맞는 데이터타입을 info가 받는다.
+    - 기본 타입은 올수 없고 참조 타입만 들어 올수있다.
+        - 기본타입을 참조 타입으로 만들어 줄수있는데, wapper...
+            - 이건 자바 내에서 객체 된 타입이 있다. int -> integer

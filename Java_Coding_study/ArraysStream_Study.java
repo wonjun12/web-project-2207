@@ -9,7 +9,6 @@ public class ArraysStream_Study {
         System.out.println(Arrays.toString(num));
         Arrays.sort(num);
         System.out.println(Arrays.toString(num));
-
         Arrays.stream(num).sum();
         
     }
